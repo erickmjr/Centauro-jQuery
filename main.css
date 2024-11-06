@@ -31,6 +31,7 @@ header{
 
 #menu-hamburguer{
     display: none;
+    cursor: pointer;
 }
 
 #menu-hamburguer span{
@@ -58,6 +59,27 @@ header img{
     padding: 1vw;
 }
 
+#menu-long{
+    width: 100%;
+    background-color: #070707;
+    display: none;
+    padding: 2vw;
+}
+
+#menu-long ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0.5vw;
+}
+
+#menu-long ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 4.5vw;
+    
+}
+
 #container-header a{
     font-size: 3vw;
     text-decoration: none
@@ -66,6 +88,7 @@ header img{
 #container-header ul{
     list-style-type: none;
     display: flex;
+    align-items: center;
     gap: 4vw;
 }
 
@@ -205,8 +228,6 @@ footer a{
         font-size: 5vw;
     }
 
-
-
     #container-products {
         grid-template-columns: 1fr;
     }
@@ -223,5 +244,23 @@ footer a{
     
 }
 
-@media screen and (min-width: 1366px){
+@media screen and (max-width: 1366px) and (min-width: 768px){
+
+    h2{
+        font-size: 4vw;
+    }
+
+    section#about p {
+        font-size: 2.5vw;
+    }
+
+    #container-products {
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    .price strong{
+        color: #000;
+        font-size: 3.25vw;
+    }
+
 }

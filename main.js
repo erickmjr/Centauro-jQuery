@@ -12,6 +12,25 @@ $(document).ready(function(){
         slidesToScroll: 1,
     })
 
-    $("")
+    $("#menu-hamburguer").click(function(){
+        $("#menu-long").slideToggle();
+    })
+
+    $(".liAbout").click(function(){
+        let destino = $("#about");
+
+        $("html").animate({
+            scrollTop: destino.offset().top
+        }, 1000)
+    })
+
+    $(".liProducts").click(function(){
+        let destino = $("#products");
+
+        $("html").animate({
+            scrollTop: destino.offset().top
+        }, 1000)
+    })
+
 
 })
