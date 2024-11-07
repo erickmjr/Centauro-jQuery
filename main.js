@@ -12,6 +12,14 @@ $(document).ready(function(){
         slidesToScroll: 1,
     })
 
+    $(".carousel-products").slick({
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    })
+
     $("#menu-hamburguer").click(function(){
         $("#menu-long").slideToggle();
     })

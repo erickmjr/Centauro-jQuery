@@ -9,19 +9,25 @@
     font-family: "Genos", sans-serif;
 }
 
-html{
+html {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     overflow-x: hidden;
 }
 
-header{
-    width: 100vw;
+#page-container{
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-#container-header{
+header {
+    width: 100vw;
+    display: flex;
+    max-height: 15vh;
+}
+
+#container-header {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -29,44 +35,44 @@ header{
     align-items: center;
 }
 
-#menu-hamburguer{
+#menu-hamburguer {
     display: none;
     cursor: pointer;
 }
 
-#menu-hamburguer span{
+#menu-hamburguer span {
     background-color: #fff;
     width: 10vw;
     height: 1vw;
 }
 
-#menu-hamburguer #mid-burguer{
+#menu-hamburguer #mid-burguer {
     margin: 1vw 0;
 }
 
-#container-header h1, #container-header a{
+#container-header h1, #container-header a {
     color: #fff;
     font-weight: 600;
 }
 
-#container-header h1{
+#container-header h1 {
     font-size: 5vw;
 }
 
-header img{
+header img {
     width: 20vw;
     background-color: #f0f0f0;
     padding: 1vw;
 }
 
-#menu-long{
+#menu-long {
     width: 100%;
     background-color: #070707;
     display: none;
     padding: 2vw;
 }
 
-#menu-long ul{
+#menu-long ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -77,22 +83,25 @@ header img{
     color: #fff;
     text-decoration: none;
     font-size: 4.5vw;
-    
 }
 
-#container-header a{
+#container-header a {
     font-size: 3vw;
-    text-decoration: none
+    text-decoration: none;
 }
 
-#container-header ul{
+#container-header ul {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 4vw;
 }
 
-section#carousel{
+main {
+    flex: 1;
+}
+
+section#carousel {
     width: 100vw;
     text-align: center;
 }
@@ -117,11 +126,11 @@ section#about {
     gap: 0;
 }
 
-h2{
+h2 {
     font-size: 3vw;
 }
 
-span{
+span {
     display: inline-block;
     background-color: #E20001;
     width: 100%;
@@ -138,7 +147,7 @@ section#about p {
 
 section#products {
     width: 90%;
-    margin: 1vw auto 1vw auto;
+    margin: 1vw auto 5vh auto;
 }
 
 #container-products {
@@ -146,27 +155,27 @@ section#products {
     display: grid;
     grid-template-columns: repeat(3, 30%);
     column-gap: 3.33%;
-    row-gap: 2%;
+    row-gap: 0.5vw;
     justify-content: center;
 }
 
-#container-products .price{
+#container-products .price {
     width: 100%;
     padding: 1vw;
     border-radius: 8px 8px 0 0;
 }
 
-.price strong{
+.price strong {
     color: #000;
     font-size: 2.5vw;
 }
 
-#container-products img{
+#container-products img {
     width: 100%;
     border-radius: 8px 8px 0 0;
 }
 
-#container-products h3{
+#container-products h3 {
     background-color: black;
     color: #fff;
     padding: 0.5vw;
@@ -174,34 +183,35 @@ section#products {
     text-align: center;
 }
 
-footer{
+.carousel-products {
+    overflow: hidden;
+}
+
+footer {
     padding: 1vw;
     background-color: black;
     color: white;
     text-align: center;
     width: 100%;
-    margin-top: auto;
-    position: absolute;
-    top: 100;
 }
 
-footer a{
+footer a {
     color: white;
     text-decoration: underline;
+    font-size: 2vw;
 }
 
+@media screen and (max-width: 767px) {
 
-@media screen and (max-width: 767px){
-
-    #container-header{
+    #container-header {
         padding: 3vw;
     }
-    
-    #container-header h1{
+
+    #container-header h1 {
         font-size: 6.5vw;
     }
-    
-    #container-header a{
+
+    #container-header a {
         font-size: 4vw;
     }
 
@@ -209,7 +219,7 @@ footer a{
         display: none;
     }
 
-    #menu-hamburguer{
+    #menu-hamburguer {
         display: flex;
         flex-direction: column;
     }
@@ -217,10 +227,9 @@ footer a{
     #carousel-images img {
         height: 100%;
         width: 100%;
-        
     }
 
-    h2{
+    h2 {
         font-size: 8vw;
     }
 
@@ -229,24 +238,32 @@ footer a{
     }
 
     #container-products {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 100%); 
     }
 
-    .price strong{
+    .price strong {
         font-size: 6vw;
     }
 
-    #container-products h3{
+    #container-products h3 {
         font-size: 5vw;
         text-align: center;
+        padding: 1vw;
     }
 
-    
+    footer{
+        padding: 2vw;
+    }
+
+    footer a{
+        font-size: 5vw;
+    }
+
 }
 
-@media screen and (max-width: 1366px) and (min-width: 768px){
+@media screen and (max-width: 1366px) and (min-width: 768px) {
 
-    h2{
+    h2 {
         font-size: 4vw;
     }
 
@@ -258,9 +275,16 @@ footer a{
         grid-template-columns: repeat(2, 45%);
     }
 
-    .price strong{
+    .price strong {
         color: #000;
         font-size: 3.25vw;
     }
 
+    footer{
+        padding: 1.5vw;
+    }
+
+    footer a{
+        font-size: 3vw;
+    }
 }
