@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $("html").click(function(e){
+    $("button").click(function(e){
         e.preventDefault();
     })
 
