@@ -153,7 +153,7 @@ section#products {
 #container-products {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(4, 22.5%);
     column-gap: 3.33%;
     row-gap: 0.5vw;
     justify-content: center;
@@ -272,7 +272,7 @@ footer a {
     }
 
     #container-products {
-        grid-template-columns: repeat(2, 45%);
+        grid-template-columns: repeat(2, 40%);
     }
 
     .price strong {
